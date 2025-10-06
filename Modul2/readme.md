@@ -1,16 +1,25 @@
-# <h1 align="center">Laporan Praktikum Struktur Data<br> Modul 2 Pengenalan Bahasa C++ </h1>
+# <h1 align="center">Laporan Praktikum Struktur Data<br>Modul 2 Pengenalan Bahasa C++</h1>
 <p align="center">Osha Alfida Valyana - 103112430202</p>
+
+---
 
 ## Dasar Teori
 
-Bahasa C++ adalah bahasa pemrograman yang dikembangkan oleh Bjarne Stroustrup pada tahun 1985 sebagai pengembangan dari bahasa C.     Dengan performa tinggi serta kontrol penuh terhadap manajemen memori, C++ banyak digunakan untuk membangun aplikasi kompleks seperti game, perangkat lunak, dan sistem berkinerja tinggi memori, C++ banyak digunakan untuk membangun aplikasi kompleks seperti game, perangkat lunak, dan sistem berkinerja tinggi.
+Bahasa C++ adalah bahasa pemrograman yang dikembangkan oleh **Bjarne Stroustrup** pada tahun 1985 sebagai pengembangan dari bahasa C.  
+Dengan performa tinggi serta kontrol penuh terhadap manajemen memori, C++ banyak digunakan untuk membangun aplikasi kompleks seperti game, perangkat lunak, dan sistem berkinerja tinggi.  
 
+Dalam C++, terdapat konsep penting seperti:
+- **Pointer** → variabel yang menyimpan alamat memori variabel lain.  
+- **Reference** → alias dari variabel lain, lebih sederhana dibanding pointer.  
+- **Fungsi** → blok kode yang dapat dipanggil berulang untuk menjalankan tugas tertentu.  
+
+---
 
 ## Guided
 
-### Soal 1
+### Soal 1 — *Call by Pointer*
 
-⁠cpp
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -30,9 +39,10 @@ void tukar(int *px, int *py)
     int temp = *px;
     *px = *py;
     *py = temp;
-} ⁠
+}
 
-	⁠outputp
+
+	⁠output
 	⁠![output]((https://github.com/chafdv/Modul2/blob/main/Modul2/output/pointer.png))
 
 Program diminta membuat program untuk menyimpan data mahasiswa (nama, NIM, IPK), lalu minta input dari user dan tampilkan kembali datanya.
