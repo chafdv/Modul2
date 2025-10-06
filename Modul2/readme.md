@@ -48,8 +48,6 @@ void tukar(int *px, int *py)
 Program diminta membuat program untuk menyimpan data mahasiswa (nama, NIM, IPK), lalu minta input dari user dan tampilkan kembali datanya.
 ---
 
-### Soal 2
-
 #include <iostream>
 using namespace std;
 
@@ -71,12 +69,9 @@ void tukar(int &x, int &y)
     y = temp;
 }
 
-	⁠outputpengerjaan
-	⁠![output pengerjaan aritmatika](https://github.com/chafdv/Modul1-/blob/main/Modul1/outputpengerjaan/aritmatika%20cpp.png)
 
-
-	⁠outputpengerjaan
-	⁠![output pengerjaan perulangan](https://github.com/chafdv/Modul1-/blob/main/Modul1/outputpengerjaan/perulangan%20cpp.png
+	⁠output
+	⁠![output]
 )
 
 Program pertama menampilkan kalimat *“saya sahroni”* berulang sesuai angka yang kita masukkan. Program kedua menampilkan kalimat *“bahlil ke-…”* berulang mulai dari 1 sampai sebelum jumlah yang kita masukkan.
