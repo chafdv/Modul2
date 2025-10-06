@@ -4,20 +4,14 @@
 ---
 
 ## Dasar Teori
+Bahasa C++ adalah bahasa pemrograman yang dikembangkan oleh Bjarne Stroustrup pada tahun 1985 sebagai pengembangan dari bahasa C.     Dengan performa tinggi serta kontrol penuh terhadap manajemen memori, C++ banyak digunakan untuk membangun aplikasi kompleks seperti game, perangkat lunak, dan sistem berkinerja tinggi memori, C++ banyak digunakan untuk membangun aplikasi kompleks seperti game, perangkat lunak, dan sistem berkinerja tinggi.
 
-Bahasa C++ adalah bahasa pemrograman yang dikembangkan oleh **Bjarne Stroustrup** pada tahun 1985 sebagai pengembangan dari bahasa C.  
-Dengan performa tinggi serta kontrol penuh terhadap manajemen memori, C++ banyak digunakan untuk membangun aplikasi kompleks seperti game, perangkat lunak, dan sistem berkinerja tinggi.  
-
-Dalam C++, terdapat konsep penting seperti:
-- **Pointer** → variabel yang menyimpan alamat memori variabel lain.  
-- **Reference** → alias dari variabel lain, lebih sederhana dibanding pointer.  
-- **Fungsi** → blok kode yang dapat dipanggil berulang untuk menjalankan tugas tertentu.  
 
 ---
 
 ## Guided
 
-### Soal 1 — *Call by Pointer*
+### Soal 1 — Call by Pointer
 
 ```cpp
 #include <iostream>
