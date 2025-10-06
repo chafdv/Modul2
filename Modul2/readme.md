@@ -10,9 +10,7 @@ Bahasa C++ adalah bahasa pemrograman yang dikembangkan oleh Bjarne Stroustrup pa
 
 ### Soal 1
 
-Sruct
-
-⁠ cpp
+⁠cpp
 #include <iostream>
 using namespace std;
 
