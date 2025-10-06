@@ -35,7 +35,7 @@ void tukar(int *px, int *py)
 > output 
 > ![output Soal 1](https://github.com/chafdv/Modul2/blob/main/Modul2/output/pointer.png)
 
-Program ini menukar nilai dua variabel menggunakan call by address. Nilai a dan b dikirim ke fungsi tukar dalam bentuk alamat, lalu isinya ditukar melalui pointer. Karena yang diubah adalah alamat aslinya, nilai a dan b ikut berubah setelah fungsi dipanggil.
+Program ini membuktikan bahwa dengan menggunakan pointer, kita dapat mengubah nilai variabel asli yang ada di fungsi main() karena pointer mengakses langsung alamat memorinya. Hal ini menunjukkan konsep call by address (pemanggilan berdasarkan alamat), yaitu ketika sebuah fungsi menerima alamat variabel sebagai parameter, bukan salinan nilainya. Dengan menggunakan operator dereference (*) pada pointer, kita dapat mengambil dan memodifikasi nilai dari alamat yang ditunjuk tersebut.
 ---
 
 ### Soal 2 Call By Reference
@@ -67,7 +67,7 @@ void tukar(int &x, int &y)
 > output  
 > ![output Soal 2](https://github.com/chafdv/Modul2/blob/main/Modul2/output/reference.png)
 
-Program ini menukar nilai dua variabel menggunakan call by reference. Variabel a dan b dikirim ke fungsi tukar sebagai referensi, sehingga perubahan pada x dan y langsung mempengaruhi nilai asli a dan b. Hasilnya, setelah fungsi dipanggil, nilai a dan b tertukar.
+Program ini menunjukkan penggunaan call by reference, di mana fungsi menerima referensi langsung dari variabel, bukan salinannya. Parameter int &x dan int &y mereferensikan variabel a dan b, sehingga perubahan pada x dan y di dalam fungsi tukar() langsung mengubah nilai asli a dan b. Program ini menukar nilai kedua variabel tanpa menggunakan pointer.
 
 ## Unguided
 
@@ -119,7 +119,9 @@ int main() {
 > output  
 > ![output Soal 1](https://github.com/chafdv/Modul2/blob/main/Modul2/output/unguided1.png)
 
-Program ini melakukan transpose matriks 3×3. Matriks awal disimpan dalam array matriks, lalu tiap elemen [i][j] dipindahkan ke posisi [j][i] pada array transpose. Setelah proses itu, program menampilkan matriks awal dan hasil transpose, di mana baris dan kolomnya saling bertukar.
+Program ini membuat matriks 3x3 secara statis, lalu menukar posisi elemen baris dan kolom menggunakan dua perulangan for.
+Setiap elemen [i][j] dipindahkan ke posisi [j][i] pada matriks baru.
+Hasilnya, matriks yang semula baris menjadi kolom.
 ---
 
 ### Soal 2
@@ -149,7 +151,9 @@ int main() {
 > output 
 > ![output Soal 2](https://github.com/chafdv/Modul2/blob/main/Modul2/output/unguided2.png)
 
-Program ini menggunakan call by reference untuk mengubah nilai variabel. Nilai angka dikirim ke fungsi kuadratkan sebagai referensi, lalu nilainya dikalikan dengan dirinya sendiri. Karena referensi mengacu langsung ke variabel asli, nilai angka di main ikut berubah menjadi hasil kuadratnya.
+Program ini menunjukkan penggunaan call by reference dengan operator &.
+Parameter x pada fungsi kuadratkan() mengacu langsung ke variabel nilai di fungsi main().
+Sehingga, perubahan nilai x di dalam fungsi juga mengubah nilai asli nilai tanpa perlu return value.
 
 ## Referensi
 
