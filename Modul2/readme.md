@@ -2,14 +2,12 @@
 <p align="center">Osha Alfida Valyana/ 103112430202</p>
 
 ## Dasar Teori
+Bahasa C++ adalah bahasa pemrograman yang dikembangkan oleh Bjarne Stroustrup pada tahun 1985 sebagai pengembangan dari bahasa C.     Dengan performa tinggi serta kontrol penuh terhadap manajemen memori, C++ banyak digunakan untuk membangun aplikasi kompleks seperti game, perangkat lunak, dan sistem berkinerja tinggi memori, C++ banyak digunakan untuk membangun aplikasi kompleks seperti game, perangkat lunak, dan sistem berkinerja tinggi.
 
-C++ adalah bahasa pemrograman yang dibuat oleh Bjarne. Stroustrup, yang merupakan perkembangan dari bahasa C, dihasilkan di Bong Labs (Dennis Ritchie) pada awal tahun 1970-an. Bahasa itu berasal dari bahasa sebelumnya, yaitu B, Awalnya, bahasa tersebut dibuatsebagai bahasa pemrograman yang berfungsi di sistem Unix, Pada perkembangannya, versi ANSI (American National Standards Institute) Bahasa pemrograman C menjadi versi utama, meskipun versi tersebut sekarang tidak sering dipakai dalam pengembangan sistem dan jaringan maupun untuk sistem tertanam, pertama kali oleh Bjarne Stroustrup di laboratorium Bell mengembangkan C++ pada awal tahun 1980-an.
 
 ## Guided
 
-### Soal 1
-
-Call By Pointer
+### Soal 1 Call By Pointer
 
 ```cpp
 #include <iostream>
@@ -34,15 +32,13 @@ void tukar(int *px, int *py)
 
 ```
 
-> Screenshoot 
-> ![Screenshot Soal 1](https://github.com/salfiayu/Modul-2/blob/main/Modul%202/screenshoot/guided1%20.png)
+> output 
+> ![output Soal 1](https://github.com/chafdv/Modul2/blob/main/Modul2/output/pointer.png)
 
 Program ini menukar nilai dua variabel menggunakan call by address. Nilai a dan b dikirim ke fungsi tukar dalam bentuk alamat, lalu isinya ditukar melalui pointer. Karena yang diubah adalah alamat aslinya, nilai a dan b ikut berubah setelah fungsi dipanggil.
 ---
 
-### Soal 2
-
-Call By Reference
+### Soal 2 Call By Reference
 
 ```cpp
 #include <iostream>
@@ -68,8 +64,8 @@ void tukar(int &x, int &y)
 
 ```
 
-> Screenshoot  
-> ![Screenshot Soal 2](https://github.com/salfiayu/Modul-2/blob/main/Modul%202/screenshoot/Guided2.png)
+> output  
+> ![output Soal 2](https://github.com/chafdv/Modul2/blob/main/Modul2/output/reference.png)
 
 Program ini menukar nilai dua variabel menggunakan call by reference. Variabel a dan b dikirim ke fungsi tukar sebagai referensi, sehingga perubahan pada x dan y langsung mempengaruhi nilai asli a dan b. Hasilnya, setelah fungsi dipanggil, nilai a dan b tertukar.
 
@@ -90,15 +86,16 @@ int main() {
         {7, 8, 9}
     };
 
-    int transpose[3][3]; 
+    int transpose[3][3];
 
+    // Proses transpose
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             transpose[j][i] = matriks[i][j];
         }
     }
 
-    cout << "Matriks Awal:\n";
+    cout << "Matriks Awal:" << endl;
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             cout << matriks[i][j] << " ";
@@ -106,7 +103,7 @@ int main() {
         cout << endl;
     }
 
-    cout << "\nMatriks Hasil Transpose:\n";
+    cout << "\nMatriks Hasil Transpose:" << endl;
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             cout << transpose[i][j] << " ";
@@ -119,40 +116,41 @@ int main() {
 
 ```
 
-> Screenshoot  
-> ![Screenshot Soal 1](https://github.com/salfiayu/Modul-2/blob/main/Modul%202/screenshoot/Unguided1.png)
+> output  
+> ![output Soal 1](https://github.com/chafdv/Modul2/blob/main/Modul2/output/unguided1.png)
 
 Program ini melakukan transpose matriks 3×3. Matriks awal disimpan dalam array matriks, lalu tiap elemen [i][j] dipindahkan ke posisi [j][i] pada array transpose. Setelah proses itu, program menampilkan matriks awal dan hasil transpose, di mana baris dan kolomnya saling bertukar.
 ---
 
 ### Soal 2
 
-Buatlah program yang menunjukkan penggunaan call by reference. Buat sebuah prosedur bernama kuadratkan yang menerima satu parameter integer secara referensi (&). Prosedur ini akan mengubah nilai asli variabel yang dilewatkan dengan nilai kuadratnya. Tampilkan nilai variabel di main() sebelum dan sesudah memanggil prosedur untuk membuktikan perubahannya. 
+Buatlah program yang menunjukkan penggunaan call by reference. Buat sebuah prosedur bernama kuadratkan yang menerima satu parameter integer secara referensi (&). Prosedur ini akan mengubah nilai asli variabel yang dilewatkan dengan nilai kuadratnya. Tampilkan nilai variabel di main() sebelum dan sesudah memanggil prosedur untuk membuktikan perubahannya.
 
 ```cpp
 #include <iostream>
 using namespace std;
 
-void kuadratkan(int &x) {   
-    x = x * x;
+void kuadratkan(int &angka) {
+    angka = angka * angka;
 }
 
-int main()
-{
-    int angka = 5;
-    cout << "Nilai awal: " << angka << endl;
-    kuadratkan(angka);
-    cout << "Nilai setelah dikuadratkan: " << angka << endl;
+int main() {
+    int nilai = 5;
+    cout << "Nilai awal: " << nilai << endl;
+
+    kuadratkan(nilai);
+
+    cout << "Nilai setelah dikuadratkan: " << nilai << endl;
     return 0;
 }
 
 ```
 
-> Sreenshoot 
-> ![Screenshot Soal 2](https://github.com/salfiayu/Modul-2/blob/main/Modul%202/screenshoot/Unguided2.png)
+> output 
+> ![output Soal 2](https://github.com/chafdv/Modul2/blob/main/Modul2/output/unguided2.png)
 
 Program ini menggunakan call by reference untuk mengubah nilai variabel. Nilai angka dikirim ke fungsi kuadratkan sebagai referensi, lalu nilainya dikalikan dengan dirinya sendiri. Karena referensi mengacu langsung ke variabel asli, nilai angka di main ikut berubah menjadi hasil kuadratnya.
 
 ## Referensi
 
-1. https://tahtamedia.co.id/index.php/issj/article/download/376/374/1410 (diakses 29-09-2025)
+1. [https://www.dicoding.com/blog/memahami-esensi-bahasa-pemrograman-c/] 
