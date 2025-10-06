@@ -1,24 +1,21 @@
-# <h1 align="center">Laporan Praktikum Struktur Data<br>Modul 2 Pengenalan Bahasa C++</h1>
-<p align="center">Osha Alfida Valyana - 103112430202</p>
-
----
+# <h1 align="center">Laporan Praktikum Struktur Data<br> Modul 2 Pengenalan C++ Bagian 2 </h1>
+<p align="center">Osha Alfida Valyana/ 103112430202</p>
 
 ## Dasar Teori
-Bahasa C++ adalah bahasa pemrograman yang dikembangkan oleh Bjarne Stroustrup pada tahun 1985 sebagai pengembangan dari bahasa C.     Dengan performa tinggi serta kontrol penuh terhadap manajemen memori, C++ banyak digunakan untuk membangun aplikasi kompleks seperti game, perangkat lunak, dan sistem berkinerja tinggi memori, C++ banyak digunakan untuk membangun aplikasi kompleks seperti game, perangkat lunak, dan sistem berkinerja tinggi.
 
-
----
+C++ adalah bahasa pemrograman yang dibuat oleh Bjarne. Stroustrup, yang merupakan perkembangan dari bahasa C, dihasilkan di Bong Labs (Dennis Ritchie) pada awal tahun 1970-an. Bahasa itu berasal dari bahasa sebelumnya, yaitu B, Awalnya, bahasa tersebut dibuatsebagai bahasa pemrograman yang berfungsi di sistem Unix, Pada perkembangannya, versi ANSI (American National Standards Institute) Bahasa pemrograman C menjadi versi utama, meskipun versi tersebut sekarang tidak sering dipakai dalam pengembangan sistem dan jaringan maupun untuk sistem tertanam, pertama kali oleh Bjarne Stroustrup di laboratorium Bell mengembangkan C++ pada awal tahun 1980-an.
 
 ## Guided
 
-### Soal 1 — Call by Pointer
+### Soal 1
+
+Call By Pointer
 
 ```cpp
 #include <iostream>
 using namespace std;
 
-void tukar(int *px, int *py);
-
+void tukar(int *px, int *py);   
 int main()
 {
     int a = 10, b = 20;
@@ -35,17 +32,23 @@ void tukar(int *px, int *py)
     *py = temp;
 }
 
+```
 
-	⁠output
-	⁠![output]((https://github.com/chafdv/Modul2/blob/main/Modul2/output/pointer.png)) 
+> Screenshoot 
+> ![Screenshot Soal 1](https://github.com/salfiayu/Modul-2/blob/main/Modul%202/screenshoot/guided1%20.png)
 
-Program diminta membuat program untuk menyimpan data mahasiswa (nama, NIM, IPK), lalu minta input dari user dan tampilkan kembali datanya.
+Program ini menukar nilai dua variabel menggunakan call by address. Nilai a dan b dikirim ke fungsi tukar dalam bentuk alamat, lalu isinya ditukar melalui pointer. Karena yang diubah adalah alamat aslinya, nilai a dan b ikut berubah setelah fungsi dipanggil.
 ---
 
+### Soal 2
+
+Call By Reference
+
+```cpp
 #include <iostream>
 using namespace std;
 
-void tukar(int &x, int &y);
+void tukar(int &x, int &y);   
 
 int main()
 {
@@ -63,22 +66,20 @@ void tukar(int &x, int &y)
     y = temp;
 }
 
+```
 
-	⁠output
-	⁠![output]
-)
+> Screenshoot  
+> ![Screenshot Soal 2](https://github.com/salfiayu/Modul-2/blob/main/Modul%202/screenshoot/Guided2.png)
 
-Program pertama menampilkan kalimat *“saya sahroni”* berulang sesuai angka yang kita masukkan. Program kedua menampilkan kalimat *“bahlil ke-…”* berulang mulai dari 1 sampai sebelum jumlah yang kita masukkan.
-
-
+Program ini menukar nilai dua variabel menggunakan call by reference. Variabel a dan b dikirim ke fungsi tukar sebagai referensi, sehingga perubahan pada x dan y langsung mempengaruhi nilai asli a dan b. Hasilnya, setelah fungsi dipanggil, nilai a dan b tertukar.
 
 ## Unguided
 
 ### Soal 1
 
-Buatlah program yang menerima input-an dua buah bilangan bertipe float, kemudian memberikan output-an hasil penjumlahan, pengurangan, perkalian, dan pembagian dari dua bilangan tersebut.
+Buatlah sebuah program untuk melakukan transpose pada sebuah matriks persegi berukuran 3x3. Operasi transpose adalah mengubah baris menjadi kolom dan sebaliknya. Inisialisasi matriks awal di dalam kode, kemudian buat logika untuk melakukan transpose dan simpan hasilnya ke dalam matriks baru. Terakhir, tampilkan matriks awal dan matriks hasil transpose.
 
-⁠ ```cpp
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -88,7 +89,14 @@ int main() {
         {4, 5, 6},
         {7, 8, 9}
     };
-    int transpose[3][3];
+
+    int transpose[3][3]; 
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            transpose[j][i] = matriks[i][j];
+        }
+    }
 
     cout << "Matriks Awal:\n";
     for (int i = 0; i < 3; i++) {
@@ -96,13 +104,6 @@ int main() {
             cout << matriks[i][j] << " ";
         }
         cout << endl;
-    }
-
-    // Proses transpose
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            transpose[j][i] = matriks[i][j];
-        }
     }
 
     cout << "\nMatriks Hasil Transpose:\n";
@@ -116,45 +117,42 @@ int main() {
     return 0;
 }
 
-	⁠output
-	⁠![output](https://github.com/chafdv/Modul1-/blob/main/Modul1/outputpengerjaan/soal1.png)
+```
 
-Program ini seperti kalkulator sederhana. Kita memasukkan dua angka, lalu program akan menampilkan hasil tambah, kurang, kali, dan bagi. Kalau angka kedua yang dimasukkan nol, program memberi tahu bahwa pembagian tidak bisa dilakukan. 
+> Screenshoot  
+> ![Screenshot Soal 1](https://github.com/salfiayu/Modul-2/blob/main/Modul%202/screenshoot/Unguided1.png)
 
+Program ini melakukan transpose matriks 3×3. Matriks awal disimpan dalam array matriks, lalu tiap elemen [i][j] dipindahkan ke posisi [j][i] pada array transpose. Setelah proses itu, program menampilkan matriks awal dan hasil transpose, di mana baris dan kolomnya saling bertukar.
 ---
 
 ### Soal 2
 
-Buatlah sebuah program yang menerima masukan angka dan mengeluarkan output nilai angka tersebut dalam bentuk tulisan. Angka yang akan di-input-kan user adalah bilangan bulat positif mulai dari 0 s.d 100.  
-Contoh: 79 → tujuh puluh sembilan
+Buatlah program yang menunjukkan penggunaan call by reference. Buat sebuah prosedur bernama kuadratkan yang menerima satu parameter integer secara referensi (&). Prosedur ini akan mengubah nilai asli variabel yang dilewatkan dengan nilai kuadratnya. Tampilkan nilai variabel di main() sebelum dan sesudah memanggil prosedur untuk membuktikan perubahannya. 
 
-⁠ ``cpp
+```cpp
 #include <iostream>
 using namespace std;
 
-void kuadratkan(int &x) {
+void kuadratkan(int &x) {   
     x = x * x;
 }
 
-int main() {
-    int nilai = 5;
-    cout << "Nilai awal: " << nilai << endl;
-    kuadratkan(nilai);
-    cout << "Nilai setelah dikuadratkan: " << nilai << endl;
+int main()
+{
+    int angka = 5;
+    cout << "Nilai awal: " << angka << endl;
+    kuadratkan(angka);
+    cout << "Nilai setelah dikuadratkan: " << angka << endl;
     return 0;
 }
 
+```
 
-	⁠output
-	⁠![output(https://github.com/chafdv/Modul1-/blob/main/Modul1/outputpengerjaan/soal2.png
-)
+> Sreenshoot 
+> ![Screenshot Soal 2](https://github.com/salfiayu/Modul-2/blob/main/Modul%202/screenshoot/Unguided2.png)
 
-Program ini mengubah angka 0 sampai 100 menjadi tulisan. Misalnya kalau kita masukkan *15* maka keluar *“lima belas”, kalau **42* keluar *“empat puluh dua”, dan kalau **100* keluar *“seratus”*. Kalau angkanya di luar 0–100, program akan bilang angkanya tidak bisa diproses. 
-
----
-
+Program ini menggunakan call by reference untuk mengubah nilai variabel. Nilai angka dikirim ke fungsi kuadratkan sebagai referensi, lalu nilainya dikalikan dengan dirinya sendiri. Karena referensi mengacu langsung ke variabel asli, nilai angka di main ikut berubah menjadi hasil kuadratnya.
 
 ## Referensi
 
-1.⁠ ⁠[https://www.dicoding.com/blog/memahami-esensi-bahasa-pemrograman-c/]
-
+1. https://tahtamedia.co.id/index.php/issj/article/download/376/374/1410 (diakses 29-09-2025)
