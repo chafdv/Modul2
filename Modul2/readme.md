@@ -37,7 +37,7 @@ void tukar(int *px, int *py)
 
 
 	⁠output
-	⁠![output]((https://github.com/chafdv/Modul2/blob/main/Modul2/output/pointer.png))
+	⁠![output]((https://github.com/chafdv/Modul2/blob/main/Modul2/output/pointer.png)) 
 
 Program diminta membuat program untuk menyimpan data mahasiswa (nama, NIM, IPK), lalu minta input dari user dan tampilkan kembali datanya.
 ---
