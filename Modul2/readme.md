@@ -32,8 +32,8 @@ void tukar(int *px, int *py)
     *py = temp;
 } ⁠
 
-	⁠outputpengerjaan
-	⁠![output pengerjaan struct](https://github.com/chafdv/Modul1-/blob/main/Modul1/outputpengerjaan/struct%20cpp.png)
+	⁠outputp
+	⁠![output]((https://github.com/chafdv/Modul2/blob/main/Modul2/output/pointer.png))
 
 Program diminta membuat program untuk menyimpan data mahasiswa (nama, NIM, IPK), lalu minta input dari user dan tampilkan kembali datanya.
 ---
